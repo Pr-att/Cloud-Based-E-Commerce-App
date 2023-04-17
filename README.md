@@ -1,2 +1,2 @@
-# Amazon Clone
- Amazon Clone made using Flutter, NodeJS and Database.
+# Amazon-Clone
+ Amazon Clone Made using Flutter, NodeJS and Database.
