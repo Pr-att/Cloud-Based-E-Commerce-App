@@ -38,6 +38,8 @@ dependencies:
   device_preview: ^1.1.0
   json_annotation: any
   http: ^0.13.3
+  provider: ^6.0.5
+  shared_preferences: ^2.1.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

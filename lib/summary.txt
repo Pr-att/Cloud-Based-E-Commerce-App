@@ -1,0 +1,23 @@
+
+"""
+Step 1: Create the project under the name "Amazon Clone". Then we created the themes class named 'Constant'
+and stored in the constants.dart file. The constant class is used to store the colors of the different
+components of the app.
+Step 2: We then created the signIn/ signUp page of the app. Created the UI and added the color from the
+constant.dart file.
+Step 3: Then , we organised the structure of the application by create directories for the
+different pages and tools for the app. We then create a new file named 'routes.dart' and stored the routes
+of the different pages in it.
+Step 4: In routes.dart, we created a dynamic Route function named 'generateRoute' which takes
+in a RouteSettings object and return a MaterialPageRoute object only when the RouterSettings passed as an
+argument in the function matches the switch-case condition. Also, added the onGenerateRoute property to
+the MaterialApp widget and passed the context as setting from the Router Settings.
+Step 5: Then the UI portion , which included the
+TextFormField Buttons and Radio Button was created. The TextFormField was created in a separate common
+file named 'custom_textfield.dart' and stored in common/widgets directory. Same was done for the
+Custom Elevated Button. A new "Enum" was also created which contain the singIn and signUp.
+Step 6: Now, we created the Server directory which contain index.js file. Nodemon and Express was
+installed and using Node Package Manager (NPM).
+
+"""
+

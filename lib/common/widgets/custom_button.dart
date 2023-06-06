@@ -13,7 +13,7 @@ class CustomButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         minimumSize: const Size(double.infinity, 50),
       ),
-      child: const Text("Sign up"),
+      child: Text(text),
     );
   }
 }
