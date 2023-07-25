@@ -1,2 +1,1 @@
-# Amazon-Clone
- Amazon Clone Made using Flutter, NodeJS and Database.
+#Cloud-Based E-Commerce App
