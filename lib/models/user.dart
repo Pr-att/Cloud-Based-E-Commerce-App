@@ -1,6 +1,3 @@
-//Created JsonSerializable function from the User class by clicking on:
-// User -> Generate -> toMap() and fromMap().
-
 import 'dart:convert';
 
 class User {
@@ -11,8 +8,9 @@ class User {
   final String address;
   final String type;
   final String token;
+  final List<dynamic> cart;
 
-  const User({
+  User({
     required this.id,
     required this.name,
     required this.email,
@@ -20,11 +18,8 @@ class User {
     required this.address,
     required this.type,
     required this.token,
+    required this.cart,
   });
-
-
-  String toJson() => json.encode(toMap()); //This function is used to convert the User object to a json string.
-  factory User.fromJson(String source) => User.fromMap(json.decode(source)); //This function is used to convert the json string to a User object.
 
   Map<String, dynamic> toMap() {
     return {
@@ -35,19 +30,50 @@ class User {
       'address': address,
       'type': type,
       'token': token,
+      'cart': cart,
     };
   }
 
   factory User.fromMap(Map<String, dynamic> map) {
     return User(
-      id: map['_id'] as String, //We use _id because the id field in the database is _id.
-      name: map['name'] as String,
-      email: map['email'] as String,
-      password: map['password'] as String,
-      address: map['address'] as String,
-      type: map['type'] as String,
-      token: map['token'] as String,
+      id: map['_id'] ?? '',
+      name: map['name'] ?? '',
+      email: map['email'] ?? '',
+      password: map['password'] ?? '',
+      address: map['address'] ?? '',
+      type: map['type'] ?? '',
+      token: map['token'] ?? '',
+      cart: List<Map<String, dynamic>>.from(
+        map['cart']?.map(
+          (x) => Map<String, dynamic>.from(x),
+        ),
+      ),
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory User.fromJson(String source) => User.fromMap(json.decode(source));
+
+  User copyWith({
+    String? id,
+    String? name,
+    String? email,
+    String? password,
+    String? address,
+    String? type,
+    String? token,
+    List<dynamic>? cart,
+  }) {
+    return User(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      email: email ?? this.email,
+      password: password ?? this.password,
+      address: address ?? this.address,
+      type: type ?? this.type,
+      token: token ?? this.token,
+      cart: cart ?? this.cart,
     );
   }
 }
-

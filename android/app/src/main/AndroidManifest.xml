@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pratyush.amazon_clone">
-   <application
+    <application
         android:label="amazon_clone"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
